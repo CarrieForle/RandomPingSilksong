@@ -22,7 +22,7 @@
     <PackageReadmeFile>README.md</PackageReadmeFile>
     <PackageIcon>icon.png</PackageIcon>
     <RepositoryUrl>https://github.com/CarrieForle/RandomPingSilksong</RepositoryUrl>
-    <Version>0.1.0</Version>
+    <Version>0.1.1</Version>
     <AssemblyName>RandomPing</AssemblyName>
   </PropertyGroup>
   <ItemGroup>
