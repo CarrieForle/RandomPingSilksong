@@ -44,9 +44,9 @@
 
   <Target Name="CopyAndPackageMod" AfterTargets="PostBuildEvent">
     <ItemGroup>
-      <Binaries Include="$(TargetPath)" LocalDir="/" PackDir="/" />
-      <Binaries Include="$(TargetDir)/$(TargetName).pdb" LocalDir="/" PackDir="/" />
-      <Binaries Include="../assets/**" LocalDir="/assets" PackDir="/assets" />
+      <Binaries Include="$(TargetPath)" LocalDir="/" PackDir="/plugins" />
+      <Binaries Include="$(TargetDir)/$(TargetName).pdb" LocalDir="/" PackDir="/plugins" />
+      <Binaries Include="../assets/**" LocalDir="/assets" PackDir="/plugins/assets" />
     </ItemGroup>
     <PropertyGroup>
       <ThunderstoreDir>$(ProjectDir)/thunderstore</ThunderstoreDir>
