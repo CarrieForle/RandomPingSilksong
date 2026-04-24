@@ -144,11 +144,6 @@ jobs:
         )
       )
     steps:
-    # This has to be first because it cleans current directory
-    - uses: actions/checkout@v6
-      with:
-        sparse-checkout: package-nexus.ps1
-        sparse-checkout-cone-mode: false
     - name: Download artifact
       uses: actions/download-artifact@v8
       with:
@@ -163,6 +158,7 @@ jobs:
         display_name: RandomPing
         version: ${{ needs.build.outputs.version }}
         file_category: main
+        archive_existing_file: false
 
   # Publish to GitHub releases to keep release history on the repository (needed for this workflow to work properly
   # but is also nice for multiple other reasons such as auto-tagging *after* a build success)
