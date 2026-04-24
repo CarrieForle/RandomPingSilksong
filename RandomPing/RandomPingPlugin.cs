@@ -44,13 +44,13 @@ public partial class RandomPingPlugin : BaseUnityPlugin
 		else
 		{
 			pingAudioClip = DownloadHandlerAudioClip.GetContent(www);
-			pingAudioClip.LoadAudioData();
 			if (pingAudioClip == null)
 			{
 				Logger.LogError($"Failed to read audio at \"{targetAudioFile}\"");
 			}
 			else
 			{
+				pingAudioClip.LoadAudioData();
 				pingAudioSource.clip = pingAudioClip;
 			}
 		}
